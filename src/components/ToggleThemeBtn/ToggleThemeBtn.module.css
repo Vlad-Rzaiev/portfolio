@@ -1,0 +1,16 @@
+.btn {
+  background-color: transparent;
+  border: none;
+}
+
+.sun {
+  width: 25px;
+  height: 25px;
+  color: yellow;
+}
+
+.moon {
+  width: 25px;
+  height: 25px;
+  color: black;
+}
