@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "home": "Головна",
+    "about": "Про мене",
+    "skills": "Навички",
+    "experience": "Досвід",
+    "projects": "Проєкти",
+    "contacts": "Контакти"
+  },
+  "langSwitch": {
+    "label": "Мова:"
+  }
+}

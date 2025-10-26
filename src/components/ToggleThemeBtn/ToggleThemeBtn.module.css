@@ -12,10 +12,6 @@
 
   background-color: transparent;
   outline: none;
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .btn::before,
@@ -64,7 +60,7 @@
   top: 7px;
   width: 40px;
   height: 40px;
-  transition: opacity 450ms linear, transform 450ms linear;
+  transition: opacity 750ms linear, transform 750ms linear;
 }
 
 .sun {

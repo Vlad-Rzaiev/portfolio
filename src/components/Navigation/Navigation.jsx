@@ -1,30 +1,33 @@
+import { useTranslation } from 'react-i18next';
 import styles from './Navigation.module.css';
 
 export const Navigation = () => {
+  const { t } = useTranslation();
+
   return (
     <nav className={styles.nav}>
       <a className={styles.link} href="#home">
-        Home
+        {t('nav.home')}
       </a>
 
       <a className={styles.link} href="#about">
-        About
+        {t('nav.about')}
       </a>
 
       <a className={styles.link} href="#skills">
-        Skills
+        {t('nav.skills')}
       </a>
 
       <a className={styles.link} href="#experience">
-        Experience
+        {t('nav.experience')}
       </a>
 
       <a className={styles.link} href="#projects">
-        Projects
+        {t('nav.projects')}
       </a>
 
       <a className={styles.link} href="#contacts">
-        Contacts
+        {t('nav.contacts')}
       </a>
     </nav>
   );
