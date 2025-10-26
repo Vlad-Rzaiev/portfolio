@@ -1,7 +1,8 @@
 .wrap {
   position: absolute;
-  top: 20px;
+  top: 50%;
   right: 130px;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -91,7 +92,7 @@
 
 :global(html.dark .cs__control) {
   background-color: transparent;
-  color: #06f512;
+  color: #e5e7eb;
   border-color: rgba(255, 255, 255, 0.25);
 }
 :global(html.dark .cs__control:hover),
