@@ -183,6 +183,17 @@ textarea {
 
 body {
   font-family: 'Montserrat', sans-serif;
+}
+
+html.theme-ready body {
+  transition: background-color 250ms linear, color 250ms linear;
+}
+
+html.light body {
   background-color: #ffffff;
   color: #101828;
+}
+html.dark body {
+  background-color: #0b1220;
+  color: #e5e7eb;
 }

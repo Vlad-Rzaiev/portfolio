@@ -1,16 +1,89 @@
 .btn {
-  background-color: transparent;
+  position: absolute;
+  overflow: hidden;
+  top: 12px;
+  right: 16px;
+
+  width: 95px;
+  height: 55px;
+
   border: none;
+  border-radius: 90px;
+
+  background-color: transparent;
+  outline: none;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.btn::before,
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: opacity 250ms linear;
+  opacity: 0;
+}
+
+.btn::before {
+  background-image: url('../../assets/themePng/dayBg.png');
+}
+.btn::after {
+  background-image: url('../../assets/themePng/nightBg.png');
+}
+
+.daySky::before {
+  opacity: 1;
+}
+.daySky::after {
+  opacity: 0;
+}
+
+.nightSky::before {
+  opacity: 0;
+}
+.nightSky::after {
+  opacity: 1;
+}
+
+.iconWrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.icon {
+  position: absolute;
+  top: 7px;
+  width: 40px;
+  height: 40px;
+  transition: opacity 450ms linear, transform 450ms linear;
 }
 
 .sun {
-  width: 25px;
-  height: 25px;
-  color: yellow;
+  left: 8px;
+  opacity: 1;
+  transform: translateX(0);
+}
+.moon {
+  right: 8px;
+  opacity: 0;
+  transform: translateX(-10px);
 }
 
-.moon {
-  width: 25px;
-  height: 25px;
-  color: black;
+.nightSky .sun {
+  opacity: 0;
+  transform: translateX(10px);
+}
+.nightSky .moon {
+  opacity: 1;
+  z-index: 9;
+  transform: translateX(0);
 }

@@ -1,9 +1,10 @@
 import { Lorem } from '../Lorem/Lorem';
 import { Section } from '../Section/Section';
 
-export const Projects = () => {
+export const Hero = () => {
   return (
-    <Section id="projects">
+    <Section>
+      <h1>Hero section</h1>
       <Lorem />
     </Section>
   );

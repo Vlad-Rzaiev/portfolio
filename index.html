@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem('theme');
+          var isDark = theme ? theme === 'dark' : false;
+          var root = document.documentElement;
+
+          root.classList.add(isDark ? 'dark' : 'light');
+
+          root.style.backgroundColor = isDark ? '#0b1220' : '#ffffff';
+          root.style.color = isDark ? '#e5e7eb' : '#101828';
+
+          root.style.colorScheme = isDark ? 'dark' : 'light';
+        } catch (e) {}
+      })();
+    </script>
+
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
