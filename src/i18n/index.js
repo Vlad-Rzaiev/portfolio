@@ -2,9 +2,9 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-import en from '../locales/en/common.json';
-import uk from '../locales/uk/common.json';
-import pl from '../locales/pl/common.json';
+import en from '../locales/en/en.json';
+import uk from '../locales/uk/uk-UA.json';
+import pl from '../locales/pl/pl.json';
 
 i18n
   .use(LanguageDetector)
@@ -17,10 +17,11 @@ i18n
     },
     fallbackLng: 'en',
     supportedLngs: ['en', 'uk', 'pl'],
+    nonExplicitSupportedLngs: true,
     detection: {
       order: ['localStorage', 'navigator', 'htmlTag'],
       caches: ['localStorage'],
-      lookupLocalStorage: 'lang',
+      lookupLocalStorage: 'vrLang',
     },
     interpolation: { escapeValue: false },
   });

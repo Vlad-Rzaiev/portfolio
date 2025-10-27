@@ -1,8 +1,8 @@
 import { Container } from '../Container/Container';
-import { LangSwitch } from '../LangSwitch/LangSwitch';
 import { Logo } from '../Logo/Logo';
-import { Navigation } from '../Navigation/Navigation';
+import { NavBar } from '../NavBar/NavBar';
 import { ToggleThemeBtn } from '../ToggleThemeBtn/ToggleThemeBtn';
+import { LangSwitch } from '../LangSwitch/LangSwitch';
 import styles from './AppBar.module.css';
 
 export const AppBar = () => {
@@ -11,7 +11,7 @@ export const AppBar = () => {
       <Container>
         <div className={styles.headerWrap}>
           <Logo />
-          <Navigation />
+          <NavBar />
           <ToggleThemeBtn />
           <LangSwitch />
         </div>

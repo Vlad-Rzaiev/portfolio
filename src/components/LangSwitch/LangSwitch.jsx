@@ -15,7 +15,7 @@ export const LangSwitch = () => {
     const lng = option?.value;
     if (!lng) return;
     i18n.changeLanguage(lng);
-    localStorage.setItem('lang', lng);
+    localStorage.setItem('vrLang', lng);
   };
 
   return (
