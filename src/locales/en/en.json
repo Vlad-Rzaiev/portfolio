@@ -9,5 +9,9 @@
   },
   "langSwitch": {
     "label": "Language:"
+  },
+  "navBar": {
+    "home": "Home",
+    "projects": "Projects"
   }
 }

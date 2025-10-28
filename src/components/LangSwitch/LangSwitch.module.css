@@ -3,6 +3,7 @@
   top: 50%;
   right: 130px;
   transform: translateY(-50%);
+
   display: flex;
   align-items: center;
   gap: 8px;
@@ -30,13 +31,13 @@
   box-shadow: none;
   transition: background-color 250ms linear, color 250ms linear,
     border-color 250ms linear, box-shadow 250ms linear;
-  cursor: pointer;
 }
 
 :global(.cs__control:hover),
 :global(.cs__control.cs__control--is-focused) {
   box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.35);
   border-color: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
 :global(.cs__value-container) {
@@ -81,6 +82,9 @@
   background-color: transparent;
   color: #101828;
   transition: background-color 250ms linear, color 250ms linear;
+  cursor: pointer;
+}
+:global(.cs__option:hover) {
   cursor: pointer;
 }
 :global(.cs__option--is-focused) {

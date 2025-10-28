@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
 import styles from './NavBar.module.css';
@@ -7,13 +8,15 @@ const navLinkClass = ({ isActive }) => {
 };
 
 export const NavBar = () => {
+  const { t } = useTranslation();
+
   return (
     <nav className={styles.nav}>
       <NavLink className={navLinkClass} to="/">
-        Home
+        {t('navBar.home')}
       </NavLink>
       <NavLink className={navLinkClass} to="/projects">
-        Projects
+        {t('navBar.projects')}
       </NavLink>
     </nav>
   );

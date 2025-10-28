@@ -13,9 +13,10 @@ export const Logo = ({ size = 32, showName = true }) => {
       transition: reduce
         ? { duration: 0 }
         : {
-            duration: 4,
+            duration: 3,
             ease: 'linear',
             delay,
+            times: [1, 1, 1],
             repeat: Infinity,
             repeatType: 'reverse',
           },

@@ -1,0 +1,25 @@
+.heroWrap {
+  position: relative;
+}
+
+.sideNav {
+  position: absolute;
+  background-color: #03c52d;
+  padding: 8px;
+  border-radius: 16px;
+  width: 7px;
+  overflow: hidden;
+
+  transition: width 500ms linear;
+}
+
+.sideNav:hover,
+.sideNav:focus {
+  width: 150px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 80px;
+}

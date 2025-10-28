@@ -5,14 +5,28 @@
   right: 16px;
   transform: translateY(-50%);
 
-  width: 95px;
-  height: 55px;
+  width: 85px;
+  height: 40px;
 
   border: none;
   border-radius: 90px;
 
   background-color: transparent;
   outline: none;
+
+  transition: box-shadow 250ms linear, border-color 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.35);
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+html.dark.btn:hover,
+html.dark.btn:focus {
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.28);
 }
 
 .btn::before,
@@ -22,7 +36,7 @@
   inset: 0;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   transition: opacity 250ms linear;
   opacity: 0;
 }
@@ -57,9 +71,9 @@
 
 .icon {
   position: absolute;
-  top: 7px;
-  width: 40px;
-  height: 40px;
+  top: 3px;
+  width: 33px;
+  height: 33px;
   transition: opacity 750ms linear, transform 750ms linear;
 }
 

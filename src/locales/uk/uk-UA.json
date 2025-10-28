@@ -9,5 +9,9 @@
   },
   "langSwitch": {
     "label": "Мова:"
+  },
+  "navBar": {
+    "home": "Головна",
+    "projects": "Проєкти"
   }
 }
