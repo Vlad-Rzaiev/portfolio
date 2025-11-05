@@ -2,24 +2,42 @@
   position: relative;
 }
 
-.sideNav {
+.decorBtn {
   position: absolute;
-  background-color: #03c52d;
-  padding: 8px;
-  border-radius: 16px;
-  width: 7px;
-  overflow: hidden;
-
-  transition: width 500ms linear;
+  left: 0;
+  top: 5px;
+  width: 44px;
+  height: 305px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  background-color: var(--bg);
+  border: 1px solid var(--br);
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 99;
+  transition: background-color 250ms linear, transform 250ms linear;
 }
 
-.sideNav:hover,
-.sideNav:focus {
-  width: 150px;
+.decorBtn:focus,
+.decorBtn:hover {
+  transform: translateX(4px);
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.word {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.letter {
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  padding-left: 80px;
+  padding-left: 55px;
 }
