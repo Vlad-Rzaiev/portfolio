@@ -1,6 +1,7 @@
 import Select from 'react-select';
 import { useTranslation } from 'react-i18next';
 import { LANGS } from '../../constants';
+import { selectStyles } from '../../theme/selectStyles';
 import styles from './LangSwitch.module.css';
 
 export const LangSwitch = () => {
@@ -20,12 +21,12 @@ export const LangSwitch = () => {
 
   return (
     <div className={styles.wrap}>
-      <label htmlFor="lang" className={styles.visuallyHidden}>
+      <label className={styles.visuallyHidden} htmlFor="lang">
         {t('langSwitch.label')}
       </label>
 
       <Select
-        classNamePrefix="cs"
+        styles={selectStyles}
         inputId="lang"
         name="lang"
         value={value}

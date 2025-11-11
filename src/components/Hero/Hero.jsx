@@ -52,7 +52,7 @@ export const Hero = () => {
           type="button"
           data-nav-toggle
           aria-label="Page Nav"
-          onClick={() => setNavOpen(s => !s)}
+          onClick={() => setNavOpen(prev => !prev)}
         >
           {words.map((word, idx) => (
             <span key={idx} className={styles.word}>
