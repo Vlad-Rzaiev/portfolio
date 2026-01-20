@@ -8,8 +8,6 @@ export const Hero = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   const pageNavRef = useRef(null);
-  const btnText = 'Page Nav';
-  const words = btnText.split(' ');
 
   useEffect(() => {
     const onKey = e => {
@@ -46,36 +44,19 @@ export const Hero = () => {
 
   return (
     <Section>
-      <div className={styles.heroWrap}>
-        <button
-          className={styles.decorBtn}
-          type="button"
-          data-nav-toggle
-          aria-label="Page Nav"
-          onClick={() => setNavOpen(prev => !prev)}
-        >
-          {words.map((word, idx) => (
-            <span key={idx} className={styles.word}>
-              {word.split('').map((letter, ind) => (
-                <span key={ind} className={styles.letter}>
-                  {letter}
-                </span>
-              ))}
-            </span>
-          ))}
-        </button>
-        <div className={styles.sideNav}>
-          <InPageNav
-            isOpen={navOpen}
-            onClose={() => setNavOpen(false)}
-            pageNavRef={pageNavRef}
-          />
-        </div>
+      <div
+        className={styles.decorMenu}
+        type="button"
+        data-nav-toggle
+        aria-label="Page Nav"
+        onClick={() => setNavOpen(prev => !prev)}
+      >
+        <InPageNav />
+      </div>
 
-        <div className={styles.content}>
-          <h1>Hero section</h1>
-          <Lorem />
-        </div>
+      <div className={styles.content}>
+        <h1>Hero section</h1>
+        <Lorem />
       </div>
     </Section>
   );

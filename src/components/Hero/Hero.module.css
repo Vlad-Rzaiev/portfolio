@@ -1,11 +1,7 @@
-.heroWrap {
-  position: relative;
-}
-
-.decorBtn {
+.decorMenu {
   position: absolute;
-  left: 0;
-  top: 5px;
+  left: -4px;
+  top: 110px;
   width: 44px;
   height: 305px;
   display: flex;
@@ -18,31 +14,19 @@
   border-radius: 8px;
   cursor: pointer;
   z-index: 99;
-  transition: background-color 250ms linear, transform 250ms linear;
+  transition:
+    background-color 250ms linear,
+    transform 250ms linear,
+    width 500ms linear;
 }
 
-.decorBtn:focus,
-.decorBtn:hover {
+.decorMenu:focus,
+.decorMenu:hover {
   transform: translateX(4px);
   background-color: var(--color-surface-hover);
+  width: 200px;
 }
 
 .sideNav {
   position: relative;
-}
-
-.word {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.letter {
-  display: block;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.content {
-  padding-left: 55px;
 }

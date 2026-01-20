@@ -1,52 +1,42 @@
 .pageNav {
-  position: absolute;
-  left: 50px;
-  top: 5px;
-  width: 200px;
-  border-radius: 20px;
-  border: 1px solid var(--color-border);
-  transform: scale(0.2);
-  transform-origin: left center;
-  opacity: 0;
-  transition: transform 250ms linear, opacity 250ms linear;
-  background-color: var(--color-surface);
-  color: var(--color-text-primary);
-  box-shadow: 2px 0 12px var(--elevation-2);
-  z-index: 9;
-  padding: 16px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 8px;
-  pointer-events: none;
-}
-
-.open {
-  transform: scale(1);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.nav {
-  flex: 1 1 auto;
+  color: var(--color-text-primary);
+  padding-left: 24px;
 }
 
 .list {
-  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 24px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.decorIcon {
+  width: 5px;
+  height: 5px;
+  background-color: var(--color-text-primary);
 }
 
 .link {
   display: inline-block;
-  padding: 8px 12px;
   border-radius: 6px;
   color: var(--color-text-primary);
   font-weight: 600;
   outline: none;
-  transition: background-color 250ms linear, transform 250ms linear;
+  transition:
+    background-color 250ms linear,
+    transform 250ms linear;
 }
+
 .link:focus,
 .link:hover {
   background-color: var(--color-surface-hover);

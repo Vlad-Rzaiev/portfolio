@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <Container>
         <Section>
-          <p>&copy; 2025 Created by Vlad Rzaiev. All rights reserved.</p>
+          <p>&copy; 2026 Created by Vlad Rzaiev. All rights reserved.</p>
         </Section>
       </Container>
     </footer>

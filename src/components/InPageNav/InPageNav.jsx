@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { inPageNavItems } from '../../constants';
 import styles from './InPageNav.module.css';
 
-export const InPageNav = ({ isOpen, onClose, pageNavRef }) => {
+export const InPageNav = () => {
   const { t } = useTranslation();
   const firstLinkRef = useRef(null);
 
@@ -11,18 +11,15 @@ export const InPageNav = ({ isOpen, onClose, pageNavRef }) => {
     e.preventDefault();
     const target = document.querySelector(href);
     if (target) target.scrollIntoView({ behavior: 'smooth' });
-    onClose?.();
   };
 
   return (
-    <div
-      className={`${styles.pageNav} ${isOpen ? styles.open : ''}`}
-      ref={pageNavRef}
-    >
+    <div className={styles.pageNav}>
       <nav className={styles.nav}>
         <ul className={styles.list}>
           {inPageNavItems.map(({ id, href, label }, idx) => (
-            <li key={id}>
+            <li className={styles.listItem} key={id}>
+              <div className={styles.decorIcon}></div>
               <a
                 className={styles.link}
                 href={href}
